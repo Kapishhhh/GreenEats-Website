@@ -12,4 +12,4 @@
     contact.html         (contact us page)
     thankyou.html        (thank you page)
 
-This will ensure that your project is easy to navigate, both for you and anyone reviewing it.
+This will ensure that your project is easy to navigate, both for you and anyone reviewing it. It simply aboutthe sustainable development.
