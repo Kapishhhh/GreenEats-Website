@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipes - GreenEats</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2fdf4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #34a853;
+      color: white;
+      padding: 7px;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: white;
+    }
+
+    h2 {
+      color: rgb(29, 28, 28);
+      margin-bottom: 20px;
+    }
+
+    .recipe-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .recipe-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .recipe-card img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .recipe-card:hover img {
+      transform: scale(1.02);
+    }
+
+    .recipe-info {
+      margin-top: 15px;
+    }
+
+    .recipe-info h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .details ul {
+      padding-left: 20px;
+    }
+
+    .details ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer Styles */
+    .foot-sec {
+      background-color: #34a853;
+      color: white;
+      padding: 40px 20px 10px 20px;
+    }
+
+    .foot-sec .main-sec {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .foot-sec .box,
+    .foot-sec .box2,
+    .foot-sec .box3 {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .foot-sec h1 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .foot-sec .social i {
+      font-size: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .foot-sec .item a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    .foot-sec .item a:hover {
+      text-decoration: underline;
+    }
+
+    .foot-sec .add p {
+      margin: 5px 0;
+    }
+
+    .foot-sec .copy {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .foot-sec .copy span {
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .foot-sec .main-sec {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🥗Recipes</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>🍽️ Planet-Friendly Plates You’ll Love
+</h2>
+    <div class="recipe-list">
+
+      <div class="recipe-card" onclick="toggleDetails(this)">
+        <img src="assets/images/1.jpg" alt="🍓 Summer Berry Chia Smoothie Bowl
+">
+        <div class="recipe-info">
+          <h3>🍓 Summer Berry Chia Smoothie Bowl
+</h3>
+          <p>Cool down with this refreshing and antioxidant-rich smoothie bowl!</p>
+          <div class="details">
+            <h4>Ingredients:</h4>
+            <ul>
+              <li>1 cup frozen mixed berries (blueberries, strawberries, raspberries)</li>
+              <li>1 frozen banana</li>
+              <li>½ cup almond milk (or plant-based milk of choice)</li>
+              <li>1 tbsp chia seeds</li>
+              <li>1 tsp maple syrup</li>
+            </ul>
+
+                        <h4>Toppings:</h4>
+            <ul>
+              <li>Fresh berries</li>
+              <li>Granola</li>
+              <li>Chia seeds</li>
+              <li>Coconut flakes</li>
+              <li>Sliced banana</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <ul>
+              <li>In a blender, combine frozen berries, banana, almond milk, chia seeds, and maple syrup.</li>
+              <li>Blend until smooth and thick (use less milk for a thicker consistency).</li>
+              <li>Pour into a bowl and add your favorite toppings.</li>
+              <li>Serve immediately and enjoy your colorful, nutrient-rich bowl!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="toggleDetails(this)">
+        <img src="assets/images/22.jpg" alt="🍁 Autumn Harvest Lentil Stew">
+        <div class="recipe-info">
+          <h3>🍁 Autumn Harvest Lentil Stew
+</h3>
+          <p>Cozy up with a hearty bowl of lentil stew packed with seasonal veggies like sweet potatoes, carrots, and kale.</p>
+          <div class="details">
+            <h4>Ingredients:</h4>
+            <ul>
+              <li>1 cup green or brown lentils, rinsed</li>
+              <li>1 tbsp olive oil</li>
+              <li>1 onion, chopped</li>
+              <li>  2 garlic cloves, minced</li>
+              <li>2 carrots, diced</li>
+              <li>1 sweet potato, peeled and chopped</li>
+<li>1 cup chopped kale</li>
+<li>1 tsp ground cumin</li>
+<li>1 tsp smoked paprika</li>
+<li>Salt & pepper to taste</li>
+<li>4 cups vegetable broth</li>
+<li>1 tbsp lemon juice (optional)</li>
+
+            </ul>
+            <h4>Instructions:</h4>
+            <ul>
+              <li>In a large pot, heat olive oil and sauté onions and garlic until soft.</li>
+<li>Add carrots, sweet potato, cumin, and paprika. Stir well.</li>
+<li>Pour in the vegetable broth and lentils. Bring to a boil.</li>
+<li>Reduce heat and simmer for 25–30 minutes, or until lentils and veggies are tender.</li>
+<li>Stir in chopped kale and cook for another 5 minutes.</li>
+<li>Add salt, pepper, and a splash of lemon juice to enhance the flavor.</li>
+<li>Serve warm with whole grain bread or on its own.</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="toggleDetails(this)">
+        <img src="assets/images/3.jpg" alt="🌯 Brown Rice & Black Bean Burrito Wraps
+">
+        <div class="recipe-info">
+          <h3>🌯 Brown Rice & Black Bean Burrito Wraps
+</h3>
+          <p>Fuel your day with these protein-packed wraps! Featuring hearty brown rice, seasoned black beans, avocado, and fresh veggies wrapped in a whole grain tortilla.</p>
+          <div class="details">
+            <h4>Ingredients:</h4>
+            <ul>
+  <li>1 cup cooked brown rice</li>
+  <li>1 cup canned black beans, drained and rinsed</li>
+  <li>½ red bell pepper, diced</li>
+  <li>½ cup corn kernels (fresh or frozen)</li>
+  <li>½ avocado, sliced</li>
+  <li>2 whole grain tortillas</li>
+  <li>2 tbsp salsa</li>
+  <li>1 tsp lime juice</li>
+  <li>Fresh cilantro (optional)</li>
+</ul>
+
+            <h4>Instructions:</h4>
+            <ul>
+               <li>In a bowl, mix black beans, red bell pepper, corn, salsa, and lime juice.</li>
+  <li>Warm tortillas slightly for easier wrapping.</li>
+  <li>Layer each tortilla with brown rice, bean mixture, avocado slices, and cilantro.</li>
+  <li>Wrap tightly like a burrito. Grill for 2–3 minutes on each side (optional) or serve fresh.</li>
+  <li>Cut in half and enjoy your wholesome, plant-based burrito!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="foot-sec">
+    <div class="main-sec">
+      <div class="box">
+        <h1>GreenEats</h1>
+        <div class="social">
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+      <div class="box2">
+        <h1>GreenEats</h1>
+        <div class="item">
+          <a href="homepage.html">Home</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="#">Privacy Policy</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="box2">
+        <h1>Explore</h1>
+        <div class="item">
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="#">Sustainability</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+      <div class="box3">
+        <h1>Contact Us</h1>
+        <div class="add">
+          <p><i class="fa-regular fa-envelope"></i> kapishsah@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> 9844333505</p>
+          <p><i class="fa-solid fa-circle-check"></i> www.greeneats.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>Copyright 2025 &copy; Design By <span>kapishsah</span></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDetails(card) {
+      const detail = card.querySelector('.details');
+      detail.style.display = (detail.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

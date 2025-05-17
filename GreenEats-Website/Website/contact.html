@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - GreenEats</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2fdf4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #34a853;
+      color: white;
+      padding: 7px;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .contact-container {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h2 {
+      color: #2e7d32;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .submit-btn {
+      background-color: #34a853;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #2e7d32;
+    }
+
+    /* Footer Styles */
+    .foot-sec {
+      background-color: #34a853;
+      color: white;
+      padding: 40px 20px 10px 20px;
+    }
+
+    .foot-sec .main-sec {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .foot-sec .box,
+    .foot-sec .box2,
+    .foot-sec .box3 {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .foot-sec h1 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .foot-sec .social i {
+      font-size: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .foot-sec .item a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    .foot-sec .item a:hover {
+      text-decoration: underline;
+    }
+
+    .foot-sec .add p {
+      margin: 5px 0;
+    }
+
+    .foot-sec .copy {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .foot-sec .copy span {
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .foot-sec .main-sec {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📬Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>💬 Let’s Connect
+</h2>
+          <p class="contact-intro">Have a question about our eco-friendly recipes? Curious about sustainable living? Or just want to drop a friendly hello? We’d love to hear from you!</p>
+        </div>
+
+        <!-- Form using FormSubmit -->
+        <form action="https://formsubmit.co/kapishsah@gmail.com" method="POST">
+          <!-- Redirect to thankyou page -->
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/Website/thankyou.html">
+          <!-- Disable captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-group">
+            <label for="name">👤 Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">📧 Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">📝  Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn"> 📤 Submit
+
+</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot-sec">
+    <div class="main-sec">
+      <div class="box">
+        <h1>GreenEats</h1>
+        <div class="social">
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+      <div class="box2">
+        <h1>GreenEats</h1>
+        <div class="item">
+          <a href="homepage.html">Home</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="#">Privacy Policy</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="box2">
+        <h1>Explore</h1>
+        <div class="item">
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="#">Sustainability</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+      <div class="box3">
+        <h1>Contact Us</h1>
+        <div class="add">
+          <p><i class="fa-regular fa-envelope"></i> kapishsah@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> 9844333505</p>
+          <p><i class="fa-solid fa-circle-check"></i> www.greeneats.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>Copyright 2025 &copy; Design By <span>kapishsah</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
